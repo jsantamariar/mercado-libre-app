@@ -11,7 +11,9 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
+    "allowImportingTsExtensions": true,
     "skipLibCheck": true,
+    "noEmit": true,
     "paths": {
       "@/*": ["./src/*"]
     }
