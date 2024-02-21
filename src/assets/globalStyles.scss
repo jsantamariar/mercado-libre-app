@@ -1,0 +1,91 @@
+$primary-color: #fee600;
+$secondary-color: #ecedf2;
+$body-color: #eeeeee;
+
+$placeholder-color: #cacaca;
+
+/* HTML */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar-container {
+  background-color: $primary-color;
+
+  .container {
+    color: white;
+    background-color: $primary-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 100px;
+    margin-left: 100px;
+
+    @media screen and (max-width: 587px) {
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+
+    .brand-container {
+      display: flex;
+      align-items: center;
+      img {
+        width: 65px;
+        height: 65px;
+        margin-right: 10px;
+        object-fit: contain;
+      }
+    }
+
+    form.search-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      position: relative;
+
+      input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ced4da;
+        margin: 10px 0;
+        &:focus {
+          outline: none;
+        }
+      }
+
+      ::placeholder {
+        color: $placeholder-color;
+        opacity: 1;
+      }
+
+      button {
+        position: absolute;
+        padding: 5.9px;
+        background-color: $secondary-color;
+        right: 1.4px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        top: 10.9px;
+        border: transparent;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* Item Card */
+.item-card-container {
+  background-color: $body-color;
+  margin: 0;
+  height: 100vh;
+
+  h2 {
+    margin: 0;
+  }
+}
