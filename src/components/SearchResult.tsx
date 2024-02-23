@@ -4,6 +4,7 @@ import { ItemsContext } from '@/context/itemsContext';
 import ItemCard from './ItemCard';
 import Breadcrumb from './Breadcrumb';
 import LoadingSpinner from './LoadingSpinner';
+import NotResults from './NotResults';
 
 export default function SearchResult() {
   const { items, loading } = useContext(ItemsContext);
@@ -19,6 +20,7 @@ export default function SearchResult() {
               <ItemCard item={item} />
             </Link>
           ))}
+        {!loading && items.items.length === 0 && <NotResults />}
       </div>
     </div>
   );
