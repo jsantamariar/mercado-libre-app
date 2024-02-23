@@ -46,6 +46,14 @@ npm install
 npm start
 ```
 
+## Pruebas unitarias
+
+Si quieres correr las pruebas unitarias de la aplicación, utiliza el siguiente comando:
+
+```bash
+npm run test
+```
+
 ## Contacto
 
 Creado por Jorge Santamaria - siéntete libre de contactarme!
