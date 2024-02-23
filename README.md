@@ -23,13 +23,28 @@ Mercado Libre App es una aplicación web inspirada en Mercado Libre, diseñada p
 Para instalar y ejecutar la aplicación en tu entorno local, sigue estos pasos:
 
 1. Clona los siguientes repositorios:
-   https://github.com/jsantamariar/mercado-libre-app
+
+```bash
+git clone https://github.com/jsantamariar/mercado-libre-app
+```
+
 2. Navega al directorio del proyecto:
-   cd mercado-libre-app
+
+```bash
+cd mercado-libre-app
+```
+
 3. Instala las dependencias:
-   npm install
+
+```bash
+npm install
+```
+
 4. Inicia la aplicación:
-   npm start
+
+```bash
+npm start
+```
 
 ## Contacto
 
