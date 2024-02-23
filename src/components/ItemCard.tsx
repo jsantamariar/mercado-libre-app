@@ -19,7 +19,11 @@ export default function ItemCard({ item }: Props) {
             <div className="item-text">
               <span className="item-price">
                 $ {priceFormatted}
-                <div className="free-shipping-icon">{free_shipping && <CiDeliveryTruck className="delivery-icon" />}</div>
+                {free_shipping && (
+                  <div className="free-shipping-icon">
+                    <CiDeliveryTruck className="delivery-icon" />
+                  </div>
+                )}
               </span>
               <p className="item-title">{title}</p>
             </div>
