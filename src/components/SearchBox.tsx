@@ -4,7 +4,7 @@ import useSearchBox from '@/hooks/useSearchBox';
 import ErrorBoundaryML from './ErrorBoundaryML';
 
 export default function SearchBox() {
-  const { handleSubmit, setSearchValue, isError } = useSearchBox();
+  const { handleSubmit, setSearchValue, searchValue, isError } = useSearchBox();
 
   if (isError) {
     return <ErrorBoundaryML />;
@@ -20,7 +20,7 @@ export default function SearchBox() {
         </div>
         <form className="search-container" onSubmit={handleSubmit}>
           <input type="text" placeholder="Nunca dejes de buscar" onChange={(e) => setSearchValue(e.target.value)} />
-          <button type="submit">
+          <button disabled={!searchValue} type="submit">
             <IoMdSearch color="black" fontSize={20} />
           </button>
         </form>
