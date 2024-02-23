@@ -1,11 +1,11 @@
 /* eslint-disable react-refresh/only-export-components */
 import { lazy, Suspense } from 'react';
 import { createBrowserRouter, createRoutesFromElements, Navigate, Route } from 'react-router-dom';
-import LoadingSpinner from '@/ui/LoadingSpinner';
+import LoadingSpinner from '@/components/LoadingSpinner';
 
-const SearchBoxView = lazy(() => import('@/views/SearchBoxView.tsx'));
-const SearchResultView = lazy(() => import('@/views/SearchResultView.tsx'));
-const ProductDetailsView = lazy(() => import('@/views/ProductDetailsView'));
+const SearchBoxPage = lazy(() => import('@/pages/SearchBoxPage'));
+const SearchResultPage = lazy(() => import('@/pages/SearchResultPage'));
+const ProductDetailsPage = lazy(() => import('@/pages/ProductDetailsPage'));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -14,7 +14,7 @@ const router = createBrowserRouter(
         path="/"
         element={
           <Suspense fallback={<LoadingSpinner />}>
-            <SearchBoxView />
+            <SearchBoxPage />
           </Suspense>
         }
       />
@@ -22,7 +22,7 @@ const router = createBrowserRouter(
         path="/items"
         element={
           <Suspense fallback={<LoadingSpinner />}>
-            <SearchResultView />
+            <SearchResultPage />
           </Suspense>
         }
       />
@@ -30,7 +30,7 @@ const router = createBrowserRouter(
         path="/items/:id"
         element={
           <Suspense fallback={<LoadingSpinner />}>
-            <ProductDetailsView />
+            <ProductDetailsPage />
           </Suspense>
         }
       />

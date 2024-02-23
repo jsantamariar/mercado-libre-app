@@ -18,6 +18,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/ui/ErrorBoundary.jsx", "src/ui/ErrorBoundary.jsx"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/components/ErrorBoundary.jsx", "src/components/ErrorBoundary.jsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

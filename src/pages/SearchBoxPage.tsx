@@ -1,4 +1,4 @@
-import SearchBox from '@/ui/SearchBox';
+import SearchBox from '@/components/SearchBox';
 
 export default function SearchBoxView() {
   return <SearchBox />;

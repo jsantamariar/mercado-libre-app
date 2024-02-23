@@ -19,13 +19,13 @@ export default function ProductDetails({ product, categories }: Props) {
           <img src={product.picture} alt={title} className="product-image" />
           <div className="product-description-container">
             <h2 className="product-description-title">Descripción del producto</h2>
-            <p className="product-description">{product.description}</p>
+            <p className="product-description">{product.description || 'No hay descripción del producto'}</p>
           </div>
         </div>
         <div className="product-details">
           <div className="product-condition-container">
             <p className="product-condition">
-              {condition === 'new' ? 'Nuevo' : 'Usado'} - {sold_quantity || 0} vendidos
+              {condition === 'new' ? 'Nuevo' : 'Usado'} - {sold_quantity || 0} {sold_quantity === 1 ? 'vendido' : 'vendidos'}
             </p>
           </div>
           <h1 className="product-title">{title}</h1>

@@ -1,5 +1,5 @@
-import SearchBox from '@/ui/SearchBox';
-import SearchResult from '@/ui/SearchResult';
+import SearchBox from '@/components/SearchBox';
+import SearchResult from '@/components/SearchResult';
 
 export default function SearchResultView() {
   return (

@@ -1,10 +1,10 @@
 import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { ItemsContext } from '@/context/itemsContext';
-import SearchBox from '@/ui/SearchBox';
-import ProductDetails from '@/ui/ProductDetails';
-import LoadingSpinner from '@/ui/LoadingSpinner';
-import ErrorBoundaryML from '@/ui/ErrorBoundaryML';
+import SearchBox from '@/components/SearchBox';
+import ProductDetails from '@/components/ProductDetails';
+import LoadingSpinner from '@/components/LoadingSpinner';
+import ErrorBoundaryML from '@/components/ErrorBoundaryML';
 import useProductDetails from '@/hooks/useProductDetails';
 
 export default function ProductDetailsView() {

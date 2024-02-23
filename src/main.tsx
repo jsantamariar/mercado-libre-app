@@ -4,7 +4,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 import ReactDOM from 'react-dom/client';
 import ItemsProvider from './context/itemsContext.jsx';
 import router from './router/main.tsx';
-import ErrorBoundaryML from './ui/ErrorBoundaryML.tsx';
+import ErrorBoundaryML from './components/ErrorBoundaryML.tsx';
 
 import './assets/globalStyles.scss';
 
