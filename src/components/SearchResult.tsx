@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { ItemsContext } from '@/context/itemsContext';
+import { ItemsContext } from '../context/itemsContext';
 import ItemCard from './ItemCard';
 import Breadcrumb from './Breadcrumb';
 import LoadingSpinner from './LoadingSpinner';

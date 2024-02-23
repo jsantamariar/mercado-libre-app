@@ -1,4 +1,4 @@
-export function formatItemPrice(amount: number) {
+function formatItemPrice(amount: number) {
   const priceString = amount.toString();
 
   const mainPart = priceString.slice(0, -2);
@@ -8,3 +8,5 @@ export function formatItemPrice(amount: number) {
 
   return { priceFormatted, decimal };
 }
+
+export { formatItemPrice };

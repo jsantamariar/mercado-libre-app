@@ -14,7 +14,7 @@ export default function Breadcrumb({ categories }: { categories: string[] }) {
                 <span className="category-name"> {category}</span>
               )}
 
-              {index < categories.length - 1 && <MdOutlineKeyboardArrowRight className="breadcrumb-icon" />}
+              {index < categories.length - 1 && <MdOutlineKeyboardArrowRight className="breadcrumb-icon" data-testid="breadcrumb-icon" />}
             </span>
           ))}
         </div>

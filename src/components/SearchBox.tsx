@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { IoMdSearch } from 'react-icons/io';
-import useSearchBox from '@/hooks/useSearchBox';
+import useSearchBox from '../hooks/useSearchBox';
 import ErrorBoundaryML from './ErrorBoundaryML';
 
 export default function SearchBox() {

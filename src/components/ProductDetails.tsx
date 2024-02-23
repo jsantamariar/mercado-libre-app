@@ -1,5 +1,5 @@
 import { Item } from '@/types';
-import { formatItemPrice } from '@/utils';
+import { formatItemPrice } from '../utils';
 import Breadcrumb from './Breadcrumb';
 
 interface Props {

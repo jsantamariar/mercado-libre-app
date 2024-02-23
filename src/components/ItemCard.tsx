@@ -1,6 +1,6 @@
 import { CiDeliveryTruck } from 'react-icons/ci';
 import { Item } from '@/types';
-import { formatItemPrice } from '@/utils';
+import { formatItemPrice } from '../utils';
 
 interface Props {
   item: Item;
@@ -20,7 +20,7 @@ export default function ItemCard({ item }: Props) {
               <span className="item-price">
                 $ {priceFormatted}
                 {free_shipping && (
-                  <div className="free-shipping-icon">
+                  <div className="free-shipping-icon" data-testid="free-shipping-icon">
                     <CiDeliveryTruck className="delivery-icon" />
                   </div>
                 )}
