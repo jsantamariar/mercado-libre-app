@@ -1,102 +1,34 @@
-interface Filter {
-  id: string;
+interface Author {
   name: string;
-  type: string;
+  lastname: string;
 }
 
-interface SortOption {
-  id: string;
-  name: string;
-}
-
-interface Paging {
-  total: number;
-  primary_results: number;
-  offset: number;
-  limit: number;
-}
-
-interface Attribute {}
-
-interface Installment {
-  quantity: number;
+interface Price {
+  currency: string;
   amount: number;
-  rate: number;
-  currency_id: string;
+  decimals: number;
 }
 
-interface Seller {
-  id: number;
-  nickname: string;
-}
-
-interface Shipping {
-  store_pick_up: boolean;
-  free_shipping: boolean;
-  logistic_type: string;
-  mode: string;
-  tags: string[];
-}
-
-interface VariationData {}
-
-interface Result {
-  accepts_mercadopago: boolean;
-  attributes: Attribute[];
-  available_quantity: number;
-  buying_mode: string;
-  catalog_listing: boolean;
-  catalog_product_id: string | null;
-  category_id: string;
-  condition: string;
-  currency_id: string;
-  discounts: null;
-  domain_id: string;
+interface Item {
   id: string;
-  installments: Installment;
-  inventory_id: string | null;
-  listing_type_id: string;
-  official_store_id: number | null;
-  official_store_name: string | null;
-  order_backend: number;
-  original_price: number | null;
-  permalink: string;
-  price: number;
-  promotions: string[];
-  sale_price: number | null;
-  seller: Seller;
-  shipping: Shipping;
-  site_id: string;
-  stop_time: string;
-  thumbnail: string;
-  thumbnail_id: string;
   title: string;
-  use_thumbnail_id: boolean;
-  variation_filters: string[];
-  variations_data: { [key: string]: VariationData };
-  winner_item_id: string | null;
+  price: Price;
+  picture: string;
+  condition: string;
+  free_shipping: boolean;
+  sold_quantity: number;
+  description?: string;
 }
 
-interface ProductInfo {
-  id: string;
-  score: number;
-  status: string;
+interface ApiResponse {
+  author: Author;
+  categories: string[];
+  items: Item[];
 }
 
-interface Items {
-  available_filters: Filter[];
-  available_sorts: SortOption[];
-  country_default_time_zone: string;
-  filters: Filter[];
-  paging: Paging;
-  pdp_tracking: {
-    group: boolean;
-    product_info: ProductInfo[];
-  };
-  query: string;
-  results: Result[];
-  site_id: string;
-  sort: SortOption;
+interface ProductResponse {
+  author: Author;
+  item: Item;
 }
 
-export { type Items, type Result };
+export type { Author, Price, Item, ApiResponse, ProductResponse };

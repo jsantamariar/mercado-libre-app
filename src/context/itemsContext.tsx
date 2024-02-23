@@ -1,48 +1,34 @@
 import { createContext, useState } from 'react';
-import { Items } from '@/types';
+import { ApiResponse } from '@/types';
 
 interface ItemsContext {
-  items: Items;
-  setItems: (items: Items) => void;
+  items: ApiResponse;
+  setItems: (data: ApiResponse) => void;
 }
 
 export const ItemsContext = createContext<ItemsContext>({
   items: {
-    available_filters: [],
-    available_sorts: [],
-    country_default_time_zone: '',
-    filters: [],
-    paging: { total: 0, primary_results: 0, offset: 0, limit: 0 },
-    pdp_tracking: {
-      group: false,
-      product_info: [],
+    author: {
+      name: '',
+      lastname: '',
     },
-    query: '',
-    results: [],
-    site_id: '',
-    sort: { id: '', name: '' },
+    categories: [],
+    items: [],
   },
   setItems: () => {},
 });
 
 const ItemsProvider = ({ children }: { children: React.ReactNode }) => {
-  const [items, setItems] = useState<Items>({
-    available_filters: [],
-    available_sorts: [],
-    country_default_time_zone: '',
-    filters: [],
-    paging: { total: 0, primary_results: 0, offset: 0, limit: 0 },
-    pdp_tracking: {
-      group: false,
-      product_info: [],
+  const [data, setData] = useState<ApiResponse>({
+    author: {
+      name: '',
+      lastname: '',
     },
-    query: '',
-    results: [],
-    site_id: '',
-    sort: { id: '', name: '' },
+    categories: [],
+    items: [],
   });
 
-  return <ItemsContext.Provider value={{ setItems, items }}>{children}</ItemsContext.Provider>;
+  return <ItemsContext.Provider value={{ setItems: setData, items: data }}>{children}</ItemsContext.Provider>;
 };
 
 export default ItemsProvider;
