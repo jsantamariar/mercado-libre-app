@@ -13,8 +13,8 @@ const useSearchBox = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
     try {
-      setLoading(true);
       const data = await getAllItems(searchValue);
       setItems(data);
       navigate('/items');
@@ -30,6 +30,7 @@ const useSearchBox = () => {
     handleSubmit,
     setSearchValue,
     isError,
+    searchValue,
   };
 };
 
