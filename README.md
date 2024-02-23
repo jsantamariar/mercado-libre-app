@@ -1,30 +1,39 @@
-# React + TypeScript + Vite
+# Mercado Libre App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
 
-Currently, two official plugins are available:
+Mercado Libre App es una aplicación web inspirada en Mercado Libre, diseñada para proporcionar una experiencia de compra en línea fluida y eficiente. Los usuarios pueden buscar productos, ver detalles de los productos y navegar a través de varias categorías.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Características
 
-## Expanding the ESLint configuration
+- **Búsqueda de Productos:** Permite a los usuarios buscar productos por nombre o categoría.
+- **Visualización de Productos:** Los usuarios pueden ver los productos, incluyendo imágenes, precios y descripciones.
+- **Navegación Intuitiva:** La interfaz de usuario está diseñada para una navegación fácil y rápida.
+- **Responsividad:** El diseño de la interfaz de usuario está diseñada para ser utilizada en dispositivos móviles, tablets y laptops.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tecnologías Utilizadas
 
-- Configure the top-level `parserOptions` property like this:
+- **React:** Para construir la interfaz de usuario de la aplicación.
+- **React Router:** Para la navegación dentro de la aplicación.
+- **Axios:** Para realizar solicitudes HTTP a una API externa.
+- **SASS:** Para escribir CSS de forma más eficiente y con un código más limpio.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Instalación y Uso
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Para instalar y ejecutar la aplicación en tu entorno local, sigue estos pasos:
+
+1. Clona los siguientes repositorios:
+   https://github.com/jsantamariar/mercado-libre-app
+2. Navega al directorio del proyecto:
+   cd mercado-libre-app
+3. Instala las dependencias:
+   npm install
+4. Inicia la aplicación:
+   npm start
+
+## Contacto
+
+Creado por Jorge Santamaria - siéntete libre de contactarme!
+
+- Email: santamaria.web.dev@gmail.com
+- LinkedIn: https://www.linkedin.com/in/santamariaramosj/
