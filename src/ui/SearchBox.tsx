@@ -1,9 +1,14 @@
 import { Link } from 'react-router-dom';
 import { IoMdSearch } from 'react-icons/io';
 import useSearchBox from '@/hooks/useSearchBox';
+import ErrorBoundaryML from './ErrorBoundaryML';
 
 export default function SearchBox() {
-  const { handleSubmit, setSearchValue } = useSearchBox();
+  const { handleSubmit, setSearchValue, isError } = useSearchBox();
+
+  if (isError) {
+    return <ErrorBoundaryML />;
+  }
 
   return (
     <nav className="navbar-container">
