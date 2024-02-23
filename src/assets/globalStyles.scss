@@ -241,7 +241,6 @@ body {
     padding: 2rem;
     margin: auto;
     background-color: $white-color;
-    gap: 1rem;
 
     @media screen and (max-width: 375px) {
       padding: 0.8rem;
@@ -308,8 +307,8 @@ body {
     }
 
     .product-details {
-      flex-grow: 1;
       flex: 0 0 40%;
+      margin-left: 1rem;
 
       .product-condition-container {
         display: flex;
@@ -511,6 +510,17 @@ body {
   text-align: center;
   width: 100%;
   padding: 1rem;
+  background-color: $body-color;
+  height: 100%;
+  z-index: 50;
+
+  .error-boundary-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
 
   h1 {
     color: $text-color;
